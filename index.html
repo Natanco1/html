@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="test, html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>my test page</title>
+    <style>
+        
+        body {
+            font:normal serif;
+            background-color:rgb(10, 10, 10);
+            background-image:url("assets/javascript-html-css1000nohaloo.png");  
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+            background-attachment: fixed;
+            background-blend-mode: lighten; 
+            opacity: 1.0;    
+        }
+        h1 {color: crimson;}
+
+        p {
+            color: rgb(110, 195, 195);
+        }
+
+        input[type=text] {
+            width: fit-content;
+            padding: auto;
+            margin: auto;
+            box-sizing: border-box;
+            background-color:darkslategrey;
+            border: transparent;
+        }
+        
+        input[type=submit]{
+            width: fit-content;
+            padding: auto;
+            margin: auto;
+            box-sizing: border-box;
+            background-color:rgb(110, 195, 195);
+            border-color:black;
+            text-emphasis-color: white;
+        }
+           
+        ul {
+            list-style: none; 
+        }
+
+        ul li::before {
+          content: "\2022";  
+          color: rgb(110, 195, 195); 
+          font-weight: bold;
+          display: inline-block; 
+          width: 1em; 
+          margin-left: -1em; 
+        }
+
+        textarea[id="story"]{
+            background-color:darkslategrey;
+            border: transparent;
+            
+        }
+        
+        label {
+            color:rgb(110, 195, 195);
+        }
+
+        dl {
+            color: rgb(110, 195, 195);
+        }
+
+        dt{
+            color: rgb(110, 195, 195);
+        }
+
+        dd{
+            color: rgb(110, 195, 195);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>html playground</h1>
+    <p>hi<br><i>this is my test page</i><br>it was made using the basics of html, javascript and css
+    </p>
+    <div>
+        <p>and this button should send an alert with <strong>your name</strong> written on it<br><br>type your name and surname:</p>
+        <input type="text" id="nome"><br>
+        <input type="text" id="sNome"><br><br>
+        <input type="submit" onclick="nomeCompleto()"><br>
+        <label for="story">expandable free writing area.<br>text will be lost upon page reload</label><br>
+        <textarea id="story" name="story"
+        rows="5" cols="20">
+        </textarea>
+        <dl>
+            <dt>HTML</dt>
+            <dd>HTML, or Hypertext Markup Language,<br> is a markup language for the web<br> that defines the structure of web pages<br></dd>
+            <dd><a href="https://www.google.com/search?q=html+definition&sxsrf=ALiCzsbi-XV4rQvJ-1QqcgH0RNx8LToDmg%3A1657303233687&ei=wXDIYpS7Kbvh1sQPu7aeqAI&ved=0ahUKEwjUn53U7-n4AhW7sJUCHTubByUQ4dUDCA4&uact=5&oq=html+definition&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgUIABCABDIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBOgcIABBHELADOgcIABCwAxBDOgoIABDkAhCwAxgBOgQIIxAnOgsIABCABBCxAxCDAUoECEEYAEoECEYYAVDADFiqLmD1MWgDcAF4AIABsAOIAbsYkgEKMC4xNy4wLjEuMZgBAKABAcgBEcABAdoBBggBEAEYCQ&sclient=gws-wiz"> you can also link one page to another like this</a></dd>
+            <dt>CSS</dt>
+            <dd>CSS stands for Cascading Style Sheets<br>
+                CSS describes how HTML elements are to be displayed on screen,<br> paper, or in other media
+                CSS saves a lot of work.<br> It can control the layout of multiple web pages all at once<br>
+                External stylesheets<br> are stored in CSS files </dd>
+                <dd><a href="https://www.w3schools.com/css/css_intro.asp">Source</a></dd>
+            <dt>javascript</dt>
+            <dd>Javascript (JS) is a scripting language,<br> primarily used on the Web. It is used to enhance HTML pages<br> and is commonly found embedded<br> in HTML code. JavaScript is an interpreted<br> language. Thus, it doesn't need to be compiled.<br> JavaScript renders web pages<br> in an interactive and dynamic fashion.</dd>
+            <dd><a href="https://www.techopedia.com/definition/3929/javascript-js">Source</a></dd>
+        </dl><br>
+        <p>and through <a href="page2.html">here</a> you can access the second page of this website<br> that should contain a few more html tag examples</p>
+    </div>
+    <nav>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=gFUyyrtxAGY">youtube link to class</a></li>
+        </ul>
+    </nav>
+
+          
+
+    <script>
+        function nomeCompleto(){
+            var nome = document.getElementById("nome").value;
+            var sNome = document.getElementById("sNome").value;
+            alert(`hey there ${nome} ${sNome}!!`);
+        }
+    </script>
+
+</body>
+</html>
